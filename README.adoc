@@ -1,6 +1,6 @@
 == OpenShift S2I Builder for Java
 
-SHAMELESS RIP FROM: https://github.com/welshstew/s2i-gradle
+SHAMELESS RIP FROM: https://github.com/jorgemoralespou/s2i-java
 
 Just toying with this so I can:
 
