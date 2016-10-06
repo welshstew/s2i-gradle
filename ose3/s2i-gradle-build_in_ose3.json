@@ -2,14 +2,14 @@
    "kind": "List",
    "apiVersion": "v1",
    "metadata": {
-      "name": "s2i-java"
+      "name": "s2i-gradle"
    },
    "items": [
       {
          "kind": "BuildConfig",
          "apiVersion": "v1",
          "metadata": {
-            "name": "s2i-java"
+            "name": "s2i-gradle"
          },
          "spec": {
             "triggers": [
@@ -33,7 +33,7 @@
             "source": {
                "type": "Git",
                "git": {
-                  "uri": "https://github.com/jorgemoralespou/s2i-java.git",
+                  "uri": "https://github.com/welshstew/s2i-gradle.git",
                   "ref": "master"
                }
             },
@@ -49,7 +49,7 @@
             "output": {
                "to": {
                   "kind": "ImageStreamTag",
-                  "name": "s2i-java:latest"
+                  "name": "s2i-gradle:latest"
                }
             },
             "resources": {}
@@ -69,10 +69,10 @@
          "kind": "ImageStream",
          "apiVersion": "v1",
          "metadata": {
-            "name": "s2i-java"
+            "name": "s2i-gradle"
          },
          "spec": {
-            "dockerImageRepository": "",
+            "dockerImageRepository": "172.30.177.25:5000/groovy/s2i-gradle",
             "tags": [
                {
                   "name": "latest",
@@ -119,7 +119,7 @@
             {
                "description": "Git source URI for application",
                "name": "GIT_URI",
-               "value": "https://github.com/jorgemoralespou/osev3-examples.git"
+               "value": "https://github.com/welshstew/osev3-examples.git"
             },
             {
                "description": "Git branch/tag reference",
@@ -187,7 +187,7 @@
                      "sourceStrategy": {
                         "from": {
                            "kind": "ImageStreamTag",
-                           "name": "s2i-java:latest"
+                           "name": "s2i-gradle:latest"
                         }
                      }
                   },
@@ -361,7 +361,7 @@
             {
                "description": "Git source URI for application",
                "name": "GIT_URI",
-               "value": "https://github.com/jorgemoralespou/osev3-examples.git"
+               "value": "https://github.com/welshstew/osev3-examples.git"
             },
             {
                "description": "Git branch/tag reference",
@@ -425,7 +425,7 @@
                      "sourceStrategy": {
                         "from": {
                            "kind": "ImageStreamTag",
-                           "name": "s2i-java:latest"
+                           "name": "s2i-gradle:latest"
                         }
                      }
                   },
